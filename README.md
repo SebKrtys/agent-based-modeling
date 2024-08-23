@@ -1,1 +1,2 @@
 # agent-based-modeling
+This repo contains the final project for the course Agent Based Modeling at Corvinus University of Budapest as part of the 3rd-year curriculum. I build an agent-based market model with unsophisticated retail, and sophisticated institutional investors, social media content and media networks based on Vanfossan et al. (2020). I also added an Erdős-Rényi graph structure to model stochastic human interactions. The model was built in LSD Model Manager as this software was used during the course.
