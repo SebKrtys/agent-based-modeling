@@ -1,0 +1,131 @@
+
+
+====================> NEW TCL SESSION
+
+(12/14/23 00:36:37)
+Command:
+Invalid Tcl variable name
+Message:
+Internal LSD error searching for variable 'nodeId'. If the problem persists, please contact developers
+-----
+
+(12/14/23 00:36:37)
+Command:
+Invalid Tcl variable name
+Message:
+Internal LSD error searching for variable 'nodeLab'. If the problem persists, please contact developers
+-----
+
+
+====================> NEW TCL SESSION
+
+(12/14/23 00:41:09)
+Command:
+Invalid Tcl variable name
+Message:
+Internal LSD error searching for variable 'nodeId'. If the problem persists, please contact developers
+-----
+
+(12/14/23 00:41:09)
+Command:
+Invalid Tcl variable name
+Message:
+Internal LSD error searching for variable 'nodeLab'. If the problem persists, please contact developers
+-----
+
+
+====================> NEW TCL SESSION
+
+(12/14/23 00:43:51)
+Command:
+Invalid Tcl variable name
+Message:
+Internal LSD error searching for variable 'nodeId'. If the problem persists, please contact developers
+-----
+
+(12/14/23 00:43:51)
+Command:
+Invalid Tcl variable name
+Message:
+Internal LSD error searching for variable 'nodeLab'. If the problem persists, please contact developers
+-----
+
+
+====================> NEW TCL SESSION
+
+(12/14/23 00:58:37)
+Command:
+Invalid Tcl variable name
+Message:
+Internal LSD error searching for variable 'nodeId'. If the problem persists, please contact developers
+-----
+
+(12/14/23 00:58:37)
+Command:
+Invalid Tcl variable name
+Message:
+Internal LSD error searching for variable 'nodeLab'. If the problem persists, please contact developers
+-----
+
+
+====================> NEW TCL SESSION
+
+(12/14/23 23:18:20)
+Command:
+Invalid Tcl variable name
+Message:
+Internal LSD error searching for variable 'nodeId'. If the problem persists, please contact developers
+-----
+
+(12/14/23 23:18:20)
+Command:
+Invalid Tcl variable name
+Message:
+Internal LSD error searching for variable 'nodeLab'. If the problem persists, please contact developers
+-----
+
+
+====================> NEW TCL SESSION
+
+(12/14/23 23:29:37)
+Command:
+set y1 [ expr { floor( $sclvmarginR + ( $vsizeR - ( ( %lf - %lf ) / ( %lf - %lf ) ) * $vsizeR ) ) } ]
+Message:
+domain error: argument not in valid range
+-----
+
+
+====================> NEW TCL SESSION
+
+(12/16/23 10:48:17)
+Command:
+ttk::messageBox -parent . -type ok -icon error -title Error -message "Cannot quit LSD" -detail "Cannot quit while simulation is running.
+
+ Press 'OK' to continue simulation processing. If you really want to abort the simulation, press 'Stop' first."
+Message:
+bad window path name ".msgBox_1749"
+-----
+
+
+====================> NEW TCL SESSION
+
+(12/16/23 17:09:01)
+Command:
+Invalid Tcl variable name
+Message:
+Internal LSD error searching for variable 'nodeId'. If the problem persists, please contact developers
+-----
+
+(12/16/23 17:09:01)
+Command:
+Invalid Tcl variable name
+Message:
+Internal LSD error searching for variable 'nodeLab'. If the problem persists, please contact developers
+-----
+
+(12/16/23 17:09:03)
+Command:
+FATAL ERROR
+Message:
+System Signal received: SIGSEGV (Segmentation violation)
+-----

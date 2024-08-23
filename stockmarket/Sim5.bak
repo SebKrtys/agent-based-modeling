@@ -1,0 +1,1762 @@
+	
+Label Root
+{
+	Son: Market
+	Label Market
+	{
+		Son: Investor
+		Label Investor
+		{
+			Param: invLearningParameter
+			Param: invCue
+			Param: invStrategyMax
+			Param: invStrategyMin
+			Param: invCapital
+			Param: invNum
+			Var: invSentiment
+			Var: invMovementConfidence
+			Var: invInvestedCapital
+			Var: invPositionValue
+			Var: invFreeCapital
+			Var: invStocks
+			Var: invdStocks
+			Var: invSocialMediaPost
+			Var: invLinkLP
+			Var: invLinkSentiment
+
+		}
+
+		Son: MutualFund
+		Label MutualFund
+		{
+			Param: fundLearningParameter
+			Param: fundCue
+			Param: fundStrategyMax
+			Param: fundStrategyMin
+			Param: fundCapital
+			Param: fundNum
+			Var: fundMovementConfidence
+			Var: fundSentiment
+			Var: fundInvestedCapital
+			Var: fundPositionValue
+			Var: fundFreeCapital
+			Var: fundStocks
+			Var: funddStocks
+
+		}
+
+		Son: MediaNetwork
+		Label MediaNetwork
+		{
+			Param: netLearningParameter
+			Param: netNum
+			Var: netSentiment
+
+		}
+
+		Son: SocialMedia
+		Label SocialMedia
+		{
+			Var: smLearningParameter
+			Var: smSentiment
+
+		}
+
+		Param: mktLearningParameter
+		Param: totalHoldings
+		Param: numOfShares
+		Param: initialIndexPrice
+		Param: maxMktState
+		Param: minMktState
+		Var: initNet
+		Var: index
+		Var: mktState
+		Var: demand
+		Var: supply
+		Var: matchingOrders
+		Var: indexAvg
+		Var: dIndex
+		Var: indexSlope
+		Var: ddIndex
+		Var: indexEMA52
+		Var: indexEMA26
+		Var: indexEMA12
+		Var: MACD
+		Var: stochasticOscillator
+		Var: RSI
+		Var: wienerProcess
+
+	}
+
+	Var: initialization
+
+}
+
+
+DATA
+
+Object: Root C	1
+Var: initialization 0 n + n n
+
+Object: Market C	1
+Param: mktLearningParameter 0 n + n n	0.0585306659734063
+Param: totalHoldings 0 n + n n	0
+Param: numOfShares 0 n + n n	100000000
+Param: initialIndexPrice 0 n + n n	100.1389
+Param: maxMktState 1 n + n n	0
+Param: minMktState 1 n + n n	0
+Var: initNet 0 n + n n	<upd: 0 0 1 10>
+Var: index 52 s + n p	103.781	103.911	103.878	103.76	103.712	103.67	103.609	103.558	103.407	103.382	103.263	103.261	103.14	103.021	102.908	102.908	102.719	102.827	102.66	102.61	102.567	102.674	102.617	102.449	102.333	102.386	102.268	102.156	102.087	102.025	102.002	101.789	101.68	101.742	101.685	101.614	101.565	101.527	101.477	101.316	101.281	101.184	101.197	101.224	101.24	101.238	101.241	101.215	101.22	101.273	101.141	101.117
+Var: mktState 1 n + n n	-3.64522995703219
+Var: demand 1 s + n n	1354
+Var: supply 1 s + n n	8148
+Var: matchingOrders 0 n + n n
+Var: indexAvg 1 n + n n	101.46
+Var: dIndex 60 n + n n	-0.131	0.034	0.118	0.048	0.042	0.06	0.051	0.152	0.024	0.12	0.002	0.12	0.119	0.114	0	0.189	-0.108	0.167	0.05	0.043	-0.107	0.056	0.168	0.116	-0.053	0.118	0.113	0.069	0.062	0.023	0.213	0.109	-0.062	0.057	0.071	0.05	0.038	0.049	0.161	0.035	0.097	-0.013	-0.027	-0.016	0.002	-0.003	0.026	-0.005	-0.053	0.132	0.024	0.071	-0.032	-0.043	-0.071	0.028	-0.023	0.185	0.09	0.108
+Var: indexSlope 50 n + n n	-32.979	8.648	29.617	12.034	10.645	15.211	12.789	38.277	6.092	30.16	0.5	30.306	30.031	28.615	0.006	47.629	-27.3	42.082	12.647	10.841	-27.003	14.229	42.379	29.248	-13.233	29.613	28.38	17.362	15.675	5.796	53.581	27.571	-15.716	14.3	17.88	12.499	9.525	12.474	40.663	8.739	24.444	-3.321	-6.704	-4.075	0.552	-0.719	6.461	-1.24	-13.27	33.141
+Var: ddIndex 50 n + n n	-41.628	-20.969	17.583	1.389	-4.566	2.423	-25.489	32.186	-24.068	29.661	-29.807	0.275	1.416	28.608	-47.623	74.929	-69.382	29.435	1.806	37.844	-41.232	-28.15	13.131	42.48	-42.846	1.234	11.018	1.687	9.879	-47.785	26.01	43.286	-30.016	-3.579	5.381	2.973	-2.949	-28.189	31.924	-15.705	27.764	3.383	-2.628	-4.627	1.27	-7.18	7.701	12.03	-46.411	27.105
+Var: indexEMA52 1 n + n n	100
+Var: indexEMA26 1 n + n n	100
+Var: indexEMA12 1 n + n n	100
+Var: MACD 1 n + n n	43.595	<upd: 26 0 1 0>
+Var: stochasticOscillator 1 n + n n	85.298	<upd: 14 0 1 0>
+Var: RSI 1 n + n n	81.392	<upd: 14 0 1 0>
+Var: wienerProcess 1 n + n n	0.021
+
+Object: Investor C	2
+Param: invLearningParameter 0 n + n n	0.397483374291553	0.397483374291553
+Param: invCue 0 n + n n	2	2
+Param: invStrategyMax 0 n + n n	0	0
+Param: invStrategyMin 0 n + n n	0	0
+Param: invCapital 0 n + n n	90674	90674
+Param: invNum 0 n + n n	1	1
+Var: invSentiment 1 n + n n	0	0
+Var: invMovementConfidence 1 n + n n	0	0
+Var: invInvestedCapital 1 s + n n	0	0
+Var: invPositionValue 1 n + n n	0	0
+Var: invFreeCapital 1 n + n n	0	0
+Var: invStocks 1 n + n n	0	0
+Var: invdStocks 1 n + n n	0	0
+Var: invSocialMediaPost 0 n + n n
+Var: invLinkLP 0 n + n n
+Var: invLinkSentiment 1 n + n n	-0.729045991406439	-0.729045991406439
+
+Object: MutualFund C	25
+Param: fundLearningParameter 0 n + n n	0.898424696136955	0.898424696136955	0.898424696136955	0.898424696136955	0.898424696136955	0.898424696136955	0.898424696136955	0.898424696136955	0.898424696136955	0.898424696136955	0.898424696136955	0.898424696136955	0.898424696136955	0.898424696136955	0.898424696136955	0.898424696136955	0.898424696136955	0.898424696136955	0.898424696136955	0.898424696136955	0.898424696136955	0.898424696136955	0.898424696136955	0.898424696136955	0.898424696136955
+Param: fundCue 0 n + n n	7	7	7	7	7	7	7	7	7	7	7	7	7	7	7	7	7	7	7	7	7	7	7	7	7
+Param: fundStrategyMax 0 n + n n	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Param: fundStrategyMin 0 n + n n	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Param: fundCapital 0 n + n n	589297	589297	589297	589297	589297	589297	589297	589297	589297	589297	589297	589297	589297	589297	589297	589297	589297	589297	589297	589297	589297	589297	589297	589297	589297
+Param: fundNum 0 n + n n	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+Var: fundMovementConfidence 1 n + n n	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Var: fundSentiment 1 n + n n	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Var: fundInvestedCapital 1 s + n n	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Var: fundPositionValue 1 n + n n	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Var: fundFreeCapital 1 n + n n	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Var: fundStocks 1 n + n n	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Var: funddStocks 1 n + n n	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+
+Object: MediaNetwork C	25
+Param: netLearningParameter 0 n + n n	0.574390585242111	0.610118079575974	0.680375532166437	0.673974002005201	0.271471473461256	0.357088972366517	0.930247374761713	0.547937470107662	0.676022559307772	0.16293444162778	0.668422105274377	0.401945687633395	0.738497395028099	0.222523466288335	0.0629976746588676	0.19572432750155	0.670749069381824	0.00698736118298635	0.211800609802402	0.403097987219194	0.733423262752244	0.779723945307453	0.934703908926548	0.926946272290917	0.880956388449314
+Param: netNum 0 n + n n	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	21	22	23	24	25
+Var: netSentiment 1 n + n n	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	<upd: 1 0 1 0>
+
+Object: SocialMedia C	1
+Var: smLearningParameter 0 n + n n
+Var: smSentiment 1 n + n n	-0.729045991406439
+
+SIM_NUM 1
+SEED 100
+MAX_STEP 60
+EQUATION fun_stockmarket.cpp
+MODELREPORT report_Sim1.html
+
+DESCRIPTION
+
+Object_Root
+
+END_DESCRIPTION
+
+Variable_initialization
+
+END_DESCRIPTION
+
+Object_Market
+
+END_DESCRIPTION
+
+Parameter_mktLearningParameter
+
+_INIT_
+All 1 instances drawn from uniform distribution between 0 and 1
+END_DESCRIPTION
+
+Parameter_totalHoldings
+
+_INIT_
+All 1 instances equal to 0
+END_DESCRIPTION
+
+Parameter_numOfShares
+
+_INIT_
+All 1 instances equal to 1e+08
+END_DESCRIPTION
+
+Parameter_initialIndexPrice
+
+_INIT_
+All 1 instances equal to 100.139
+END_DESCRIPTION
+
+Parameter_maxMktState
+
+_INIT_
+All 1 instances equal to 0
+END_DESCRIPTION
+
+Parameter_minMktState
+
+_INIT_
+All 1 instances equal to 0
+END_DESCRIPTION
+
+Variable_initNet
+
+END_DESCRIPTION
+
+Variable_index
+
+_INIT_
+All 1 instances drawn from normal distribution of mean 100 and s.d. 1.13
+END_DESCRIPTION
+
+Variable_mktState
+
+_INIT_
+All 1 instances drawn from uniform distribution between -5 and 5
+END_DESCRIPTION
+
+Variable_demand
+
+_INIT_
+All 1 instances equal to 1354
+END_DESCRIPTION
+
+Variable_supply
+
+_INIT_
+All 1 instances drawn from integer uniform distribution between 0 and 10000
+END_DESCRIPTION
+
+Variable_matchingOrders
+
+END_DESCRIPTION
+
+Variable_indexAvg
+
+END_DESCRIPTION
+
+Variable_dIndex
+
+END_DESCRIPTION
+
+Variable_indexSlope
+
+_INIT_
+All 1 instances equal to 0
+END_DESCRIPTION
+
+Variable_ddIndex
+
+END_DESCRIPTION
+
+Variable_indexEMA52
+
+_INIT_
+All 1 instances equal to 100
+END_DESCRIPTION
+
+Variable_indexEMA26
+
+_INIT_
+All 1 instances equal to 100
+END_DESCRIPTION
+
+Variable_indexEMA12
+
+_INIT_
+All 1 instances equal to 100
+END_DESCRIPTION
+
+Variable_MACD
+
+_INIT_
+All 1 instances drawn from uniform distribution between -7 and 7
+END_DESCRIPTION
+
+Variable_stochasticOscillator
+
+_INIT_
+All 1 instances drawn from normal distribution of mean 0 and s.d. 100
+END_DESCRIPTION
+
+Variable_RSI
+
+_INIT_
+All 1 instances drawn from uniform distribution between 0 and 100
+END_DESCRIPTION
+
+Variable_wienerProcess
+
+_INIT_
+All 1 instances equal to 0.0251828
+END_DESCRIPTION
+
+Object_Investor
+
+END_DESCRIPTION
+
+Parameter_invLearningParameter
+
+_INIT_
+All 2500 instances drawn from uniform distribution between 0 and 1
+END_DESCRIPTION
+
+Parameter_invCue
+
+_INIT_
+All 2500 instances drawn from integer uniform distribution between 1 and 10
+END_DESCRIPTION
+
+Parameter_invStrategyMax
+
+END_DESCRIPTION
+
+Parameter_invStrategyMin
+
+END_DESCRIPTION
+
+Parameter_invCapital
+
+_INIT_
+All 2500 instances drawn from integer uniform distribution between 1000 and 100000
+END_DESCRIPTION
+
+Parameter_invNum
+
+_INIT_
+All 2500 instances increasing from 1 with step 1
+END_DESCRIPTION
+
+Variable_invSentiment
+
+_INIT_
+All 2500 instances equal to 0
+END_DESCRIPTION
+
+Variable_invMovementConfidence
+
+_INIT_
+All 2500 instances equal to 0
+END_DESCRIPTION
+
+Variable_invInvestedCapital
+
+_INIT_
+All 2500 instances equal to 0
+END_DESCRIPTION
+
+Variable_invPositionValue
+
+_INIT_
+All 2500 instances equal to 0
+END_DESCRIPTION
+
+Variable_invFreeCapital
+
+_INIT_
+All 2500 instances equal to 0
+END_DESCRIPTION
+
+Variable_invStocks
+
+_INIT_
+All 2500 instances equal to 0
+END_DESCRIPTION
+
+Variable_invdStocks
+
+_INIT_
+All 2500 instances equal to 0
+END_DESCRIPTION
+
+Variable_invSocialMediaPost
+
+END_DESCRIPTION
+
+Variable_invLinkLP
+
+END_DESCRIPTION
+
+Variable_invLinkSentiment
+
+_INIT_
+All 2500 instances drawn from uniform distribution between -1 and 1
+END_DESCRIPTION
+
+Object_MutualFund
+
+END_DESCRIPTION
+
+Parameter_fundLearningParameter
+
+_INIT_
+All 25 instances drawn from uniform distribution between 0 and 1
+END_DESCRIPTION
+
+Parameter_fundCue
+
+_INIT_
+All 25 instances drawn from integer uniform distribution between 1 and 10
+END_DESCRIPTION
+
+Parameter_fundStrategyMax
+
+END_DESCRIPTION
+
+Parameter_fundStrategyMin
+
+END_DESCRIPTION
+
+Parameter_fundCapital
+
+_INIT_
+All 25 instances drawn from integer uniform distribution between 100000 and 1e+06
+END_DESCRIPTION
+
+Parameter_fundNum
+
+_INIT_
+All 25 instances increasing from 1 with step 1
+END_DESCRIPTION
+
+Variable_fundMovementConfidence
+
+_INIT_
+All 25 instances equal to 0
+END_DESCRIPTION
+
+Variable_fundSentiment
+
+_INIT_
+All 25 instances equal to 0
+END_DESCRIPTION
+
+Variable_fundInvestedCapital
+
+_INIT_
+All 25 instances equal to 0
+END_DESCRIPTION
+
+Variable_fundPositionValue
+
+_INIT_
+All 25 instances equal to 0
+END_DESCRIPTION
+
+Variable_fundFreeCapital
+
+_INIT_
+All 25 instances equal to 0
+END_DESCRIPTION
+
+Variable_fundStocks
+
+_INIT_
+All 25 instances equal to 0
+END_DESCRIPTION
+
+Variable_funddStocks
+
+_INIT_
+All 25 instances equal to 0
+END_DESCRIPTION
+
+Object_MediaNetwork
+
+END_DESCRIPTION
+
+Parameter_netLearningParameter
+
+_INIT_
+All 25 instances drawn from uniform distribution between 0 and 1
+END_DESCRIPTION
+
+Parameter_netNum
+
+_INIT_
+All 25 instances increasing from 1 with step 1
+END_DESCRIPTION
+
+Variable_netSentiment
+
+_INIT_
+All 25 instances equal to 1
+END_DESCRIPTION
+
+Object_SocialMedia
+
+END_DESCRIPTION
+
+Variable_smLearningParameter
+
+END_DESCRIPTION
+
+Variable_smSentiment
+
+_INIT_
+All 1 instances drawn from uniform distribution between -1 and 1
+END_DESCRIPTION
+
+
+DOCUOBSERVE
+
+END_DOCUOBSERVE
+
+
+DOCUINITIAL
+
+END_DOCUINITIAL
+
+
+EQ_FILE
+//#define EIGENLIB			// uncomment to use Eigen linear algebra library
+
+#include "fun_head_fast.h"
+#include <vector>
+#include <algorithm>
+#include <random>
+#include <set>
+#include <cmath>
+
+class subs // subscriptions
+{
+	public:
+	int nMediaSubs;
+	vector <int> mediaSubs;
+	int nFundSubs;
+	vector <int> fundSubs;
+};
+
+// do not add Equations in this area
+
+MODELBEGIN
+
+// insert your equations here, ONLY between the MODELBEGIN and MODELEND words
+
+// initialization
+
+EQUATION("initialization")
+
+// initialization of the parameters and variables
+
+// investor
+CYCLE(cur,"Investor")
+{
+	v[0] = VS(cur, "invCue");
+	switch(int(v[0]))
+	{
+		case 1:
+			// Market Index
+			v[1] = uniform(50,200);
+			v[2] = uniform(50,200);
+			
+			break;
+			
+		case 2:
+			// Market Index Slope
+			v[1] = uniform(-10,10);
+			v[2] = uniform(-10,10);
+			
+			break;
+			
+		case 3:
+			// Market Index Average
+			v[1] = uniform(-50,50);
+			v[2] = uniform(-50,50);
+			
+			break;
+			
+		case 4:
+			// Consecutive periods Up/Down
+			v[1] = uniform(5,15);
+			v[2] = uniform(5,15);
+			
+			break;
+		
+		case 5:
+			// Market Index Acceleration
+			v[1] = uniform(-12,12);
+			v[2] = uniform(-12,12);
+			
+			break;
+		
+		case 6:
+			// MACD
+			v[1] = uniform(-7,7);
+			v[2] = uniform(-7,7);
+			
+			break;
+			
+		case 7:
+			//Stochastic Oscillator
+			v[1] = uniform(0,100);
+			v[2] = uniform(0,100);
+			
+			break;
+			
+		case 8:
+			// Index Exponential Moving Average (52 - day)
+			v[1] = uniform(75,175);
+			v[2] = uniform(75,175);
+			
+			break;
+			
+		case 9:
+			// Index Exponential Moving Average (52 - day)
+			v[1] = uniform(75,175);
+			v[2] = uniform(75,175);
+			
+			break;
+			
+		default:
+			// RSI
+			v[1] = uniform(0,100);
+			v[2] = uniform(0,100);
+			
+			break;
+	}
+	if (v[1] < v[2])
+	{
+		v[1] += v[2];
+		v[2] = v[1] - v[2];
+		v[1] -= v[2];
+	}
+			
+	WRITES(cur, "invStrategyMax", v[1]);
+	WRITES(cur, "invStrategyMin", v[2]);
+	
+	ADDEXTS(cur, subs); // create the subs class for each investor 
+	WRITE_EXTS(cur, subs, nFundSubs, uniform_int(0,25)); // number of fund subscriptions
+	v[4] = int(V_EXTS(cur, subs, nFundSubs));
+	for (int i=0; i<v[4]; i++)
+	{
+		v[5] = uniform(1,25);
+		while(count(V_EXTS(cur, subs, fundSubs).begin(), V_EXTS(cur, subs, fundSubs).end(),v[5]))
+		{
+			v[5] = uniform(1,25);
+		}
+		EXEC_EXTS(cur, subs, fundSubs, push_back, ( int ) v[5]);
+	}
+	
+		WRITE_EXTS(cur, subs, nMediaSubs, uniform_int(0,25)); // number of media subscriptions
+	v[4] = int(V_EXTS(cur, subs, nMediaSubs));
+	for (int i=0; i<v[4]; i++)
+	{
+		v[5] = uniform(1,25);
+		while(count(V_EXTS(cur, subs, mediaSubs).begin(), V_EXTS(cur, subs, mediaSubs).end(),v[5]))
+		{
+			v[5] = uniform(1,25);
+		}
+		EXEC_EXTS(cur, subs, mediaSubs, push_back, ( int ) v[5]);
+	}
+	
+	WRITELS(cur, "invSentiment", uniform(-1,1), t-1);
+	WRITELS(cur, "invMovementConfidence", uniform(0,1), t-1);
+	v[6] = VS(cur, "invCapital");
+	v[7] = uniform(0,v[6]);
+	WRITELS(cur, "invInvestedCapital", v[7], t-1);
+	WRITELS(cur, "invPositionValue", v[7], t-1);
+	WRITELS(cur, "invFreeCapital", v[6]-v[7], t-1);
+	v[8] = v[6]-v[7];
+	WRITELS(cur, "invStocks", v[8]/VL("index",1),t-1);
+} // end of investor cycle
+
+// mutual fund
+CYCLE(cur1,"MutualFund")
+{
+	v[8] = VS(cur1, "fundCue");
+	switch(int(v[8]))
+	{
+		case 1:
+			// Market Index
+			v[9] = uniform(50,200);
+			v[10] = uniform(50,200);
+			
+			break;
+			
+		case 2:
+			// Market Index Slope
+			v[9] = uniform(-10,10);
+			v[10] = uniform(-10,10);
+			
+			break;
+			
+		case 3:
+			// Market Index Average
+			v[9] = uniform(-50,50);
+			v[10] = uniform(-50,50);
+			
+			break;
+			
+		case 4:
+			// Consecutive periods Up/Down
+			v[9] = uniform(5,15);
+			v[10] = uniform(5,15);
+			
+			break;
+		
+		case 5:
+			// Market Index Acceleration
+			v[9] = uniform(-12,12);
+			v[10] = uniform(-12,12);
+			
+			break;
+		
+		case 6:
+			// MACD
+			v[9] = uniform(-7,7);
+			v[10] = uniform(-7,7);
+			
+			break;
+			
+		case 7:
+			//Stochastic Oscillator
+			v[9] = uniform(0,100);
+			v[10] = uniform(0,100);
+			
+			break;
+			
+		case 8:
+			// Index Exponential Moving Average (52 - day)
+			v[9] = uniform(75,175);
+			v[10] = uniform(75,175);
+			
+			break;
+			
+		case 9:
+			// Index Exponential Moving Average (52 - day)
+			v[9] = uniform(75,175);
+			v[10] = uniform(75,175);
+			
+			break;
+			
+		default:
+			// RSI
+			v[9] = uniform(0,100);
+			v[10] = uniform(0,100);
+			
+			break;
+	}
+	
+	if (v[9] < v[10])
+		{
+			v[9] += v[10];
+			v[10] = v[9] - v[10];
+			v[9] -= v[10];
+		}	
+	WRITES(cur1, "fundStrategyMax", v[9]);
+	WRITES(cur1, "fundStrategyMin", v[10]);
+	
+	WRITELS(cur1, "fundSentiment", uniform(0,1), t-1);
+	WRITELS(cur1, "fundMovementConfidence", uniform(0,1), t-1);
+	WRITELS(cur1, "fundInvestedCapital", 0, t-1);
+	WRITELS(cur1, "fundPositionValue", 0, t-1);
+	
+	WRITELS(cur1, "fundSentiment", uniform(-1,1), t-1);
+	WRITELS(cur1, "fundMovementConfidence", uniform(0,1), t-1);
+	v[11] = VS(cur1, "fundCapital");
+	v[12] = uniform(0,v[11]);
+	WRITELS(cur1, "fundInvestedCapital", v[12], t-1);
+	WRITELS(cur1, "fundPositionValue", v[12], t-1);
+	WRITELS(cur1, "fundFreeCapital", v[11]-v[12], t-1);
+	v[13] = v[11]-v[12];
+	WRITELS(cur1, "fundStocks", v[13]/VL("index",1),t-1);
+} // end of mutual fund cycle
+
+// media network 
+CYCLE(cur2, "MediaNetwork")
+{
+	WRITELS(cur2, "netSentiment", uniform(0,1), t-1);
+} // end of media network cycle
+
+// total holdings
+v[13] = 0;
+CYCLE(cur, "Investor")
+{
+	v[13] += VLS(cur, "invInvestedCapital",1);
+}
+CYCLE(cur1, "MutualFund")
+{
+	v[13] += VLS(cur1, "fundInvestedCapital",1);
+}
+
+v[13] = floor(v[13]/VL("index",1));
+cur3 = SEARCH("Market");
+WRITES(cur3,"totalHoldings", v[13]);
+
+cur4 = SEARCH("Market");
+INIT_NETS(cur4, "Investor", "RENYI-ERDOS", 0, 8);
+
+PARAMETER
+RESULT(1) // end of initialization
+
+EQUATION("initNet")
+INIT_NET("Investor", "RENYI-ERDOS", 0, 8);
+RESULT(1)
+
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+
+////// MARKET EQUATIONS //////
+
+// wiener process
+EQUATION("wienerProcess")
+v[0] = norm(0,1)*1/(sqrt(252));
+v[1] = VL("wienerProcess",1);
+v[1] += v[0];
+RESULT(v[1])
+
+// market index
+EQUATION("index")
+
+v[0] = VL("index", 1);
+v[1] = VL("demand", 1);
+v[2] = VL("supply", 1);
+v[3] = V("totalHoldings");
+v[4] = V("initialIndexPrice");
+v[5] = V("wienerProcess");
+v[8] = int(T);
+v[6] = exp((0.1-0.18*0.18)*(v[8]/252) + 0.18*v[5]);
+//v[7] = v[0]*(1+(v[1]-v[2])/(v[1]+v[2])); // only demand-supply
+//v[7] = v[4]*v[6]; // only random
+v[7] = v[0]*((v[1]-v[2])/(v[1]+v[2])) + v[4]*v[6]; // demand-supply + random
+
+RESULT(v[7]) // end of market index
+
+// market index average
+EQUATION("indexAvg")
+
+v[0] = VL("indexAvg",1) * (T-1) + V("index");
+v[1] = T;
+
+RESULT(v[0]/v[1]) // end of index average
+
+// change of market index
+EQUATION("dIndex")
+
+v[0] = V("index");
+v[1] = VL("index", 1);
+
+RESULT(v[0]-v[1]) // end of change of market index 
+
+// acceleration of market index
+EQUATION("ddIndex")
+
+v[0] = V("dIndex");
+v[1] = VL("dIndex", 1);
+
+RESULT(v[0]-v[1]) // end of acceleration of market index
+
+// index slope
+EQUATION("indexSlope")
+
+v[0] = VL("index",1);
+v[1] = V("index");
+v[2] = (v[1]-v[0])*252;
+
+RESULT(v[2]) // end of index slope
+
+// EMA-52
+EQUATION("indexEMA52")
+
+v[0] = V("index");
+v[1] = 2/(52+1); // alpha multiplier - smoothing param
+v[2] = VL("indexEMA52", 1);
+v[3] = (v[0] * v[1]) + (v[2] * (1-v[1]));
+
+RESULT(v[3]) // EMA-52 vége
+
+// EMA-26
+EQUATION("indexEMA26")
+
+v[0] = V("index");
+v[1] = 2/(26+1); // alpha multiplier - smoothing param
+v[2] = VL("indexEMA26", 1);
+v[3] = (v[0] * v[1]) + (v[2] * (1-v[1]));
+
+RESULT(v[3]) // EMA-26 vége
+
+// EMA-12
+EQUATION("indexEMA12")
+
+v[0] = V("index");
+v[1] = 2/(12+1); // alpha multiplier - smoothing param
+v[2] = VL("indexEMA12", 1);
+v[3] = (v[0] * v[1]) + (v[2] * (1-v[1]));
+
+RESULT(v[3]) // EMA-12 vége
+
+// MACD
+EQUATION("MACD")
+
+v[0] = V("indexEMA12");
+v[1] = V("indexEMA26");
+
+RESULT(v[0]-v[1]) // end of MACD
+
+// stochastic ostillator
+EQUATION("stochasticOscillator")
+
+v[0] = V("index"); // most recent closing price
+v[1] = V("index"); // 14-day min
+v[2] = V("index"); // 14-day max
+
+for (i=1;i<14;i++)
+{	
+	v[3] = VL("index",i);
+	if (v[3]<v[1])
+	{
+		v[1] = v[3];
+	} else if (v[3]>v[2])
+	{
+		v[2] = v[3];
+	}
+}
+	
+v[4] = ((v[0]-v[1])/(v[2]-v[1]))*100;
+RESULT(v[4]) // end of stochastic oscillator
+
+// RSI
+EQUATION("RSI")
+
+v[0] = 0; // cumsum of positive changes U
+v[1] = 0; // cumsum of negative changes D
+
+for (i=14;i>0;i--)
+{
+	v[2] = VL("dIndex",i);
+	v[0] += (v[2]>0) ? v[2] : 0;
+	v[1] -= (v[2]<0) ? v[2] : 0;
+}
+
+v[3] = (V("dIndex")>0) ? V("dIndex") : 0; // recent gain
+v[4] = (V("dIndex")<0) ? -V("dIndex") : 0; // recent loss
+v[5] = (13*v[0]+v[3])/14; // ema14 gain
+v[6] = (13*v[1]+v[4])/14; // ema14 loss
+
+v[7] = (v[6]==0) ? 100 : 100-100/(1+v[5]/v[6]); // RSI
+
+RESULT(v[7]) // end of RSI
+
+// market state
+EQUATION("mktState")
+
+V("index");
+V("dIndex");
+V("indexAvg");
+V("indexSlope");
+V("ddIndex"); // acceleration
+
+v[0] = 0; // M_max
+v[1] = 0; // M_min
+v[2] = V("index");
+v[3] = V("dIndex")/VL("index",1); // change from previous period
+v[4] = V("indexAvg");
+
+// MA(5)
+
+v[5] = V("index")/5; // index MA(5)
+v[6] = V("indexSlope")/5; // slope MA(5)
+v[7] = V("ddIndex")/5; // acceleration MA(5)
+
+for(int i=1; i<5; i++) {
+	v[5] += VL("index", i)/5;
+	v[6] += VL("indexSlope", i)/5;
+	v[7] += VL("ddIndex", i)/5;
+}
+
+// MA(20)
+
+v[8] = V("index")/20; // index MA(20)
+v[9] = V("indexSlope")/20; // slope MA(20)
+v[10] = V("ddIndex")/20; // acceleration MA(20)
+
+for(int i=1; i<20; i++) {
+	v[8] += VL("index", i)/20;
+	v[9] += VL("indexSlope", i)/20;
+	v[10] += VL("ddIndex", i)/20;
+}
+
+// MA(50)
+v[11] = V("index")/50; // index MA(50)
+v[12] = V("indexSlope")/50; // slope MA(50)
+v[13] = V("ddIndex")/50; // acceleration MA(50)
+
+for(int i=1; i<50; i++) {
+	v[11] += VL("index", i)/50;
+	v[12] += VL("indexSlope", i)/50;
+	v[13] += VL("ddIndex", i)/50;
+}
+
+v[0] = max(V("maxMktState"),max(v[3],max(v[2]/v[4],max(v[2]/v[5],max(v[2]/v[8],max(v[2]/v[11],max(v[6],max(v[9],max(v[12],max(v[7],max(v[10],v[13])))))))))));
+v[1] = min(V("minMktState"),min(v[3],min(v[2]/v[4],min(v[2]/v[5],min(v[2]/v[8],min(v[2]/v[11],min(v[6],min(v[9],min(v[12],min(v[7],min(v[10],v[13])))))))))));
+
+WRITE("maxMktState",v[0]);
+WRITE("minMktState",v[1]);
+
+v[14] = v[3] + v[2]/v[4] + v[2]/v[5] + v[2]/v[8] + v[2]/v[11] + v[6] + v[9] + v[12] + v[7] + v[10] + v[13] - 11*v[1];
+v[15] = v[0] - v[1];
+	
+RESULT(v[14] / v[15]) // end of market state
+
+//demand
+EQUATION("demand")
+v[0] = 0; // sum of change in number of holdings
+v[1] = V("index");
+
+CYCLE(cur, "Investor"){
+	v[2] = VS(cur, "invInvestedCapital"); // desired position value
+	v[3] = VLS(cur, "invStocks" , 1); // num of stocks held
+	v[4] = floor((v[2]-(v[1]*v[3]))/v[1]); // unique change in number of holdings
+	if (v[4]>0) v[0]+=v[4];
+} // end of investor cycle
+
+CYCLE(cur1, "MutualFund"){
+	v[5] = VS(cur1, "fundInvestedCapital"); // desired position value
+	v[6] = VLS(cur1, "fundStocks",1); // num of stocks held
+	v[7] = floor((v[5]-(v[1]*v[6]))/v[1]); // unique change in number of holdings
+	if (v[7]>0) v[0]+=v[7];
+}// end of fund cycle
+RESULT(v[0]) // end of demand
+
+// supply
+EQUATION("supply")
+v[0] = 0; // sum of change in num of holdings
+v[1] = V("index");
+
+CYCLE(cur, "Investor"){
+	v[2] = VS(cur, "invInvestedCapital"); // desired position value
+	v[3] = VLS(cur, "invStocks" , 1); // num of stocks held
+	v[4] = floor((v[2]-(v[1]*v[3]))/v[1]); // unique change in number of holdings
+	if (v[4]<0) v[0]-=v[4];
+} // end of investor cycle
+
+CYCLE(cur1, "MutualFund"){
+	v[5] = VS(cur1, "fundInvestedCapital"); // desired position value
+	v[6] = VLS(cur1, "fundStocks",1); // num of stocks held
+	v[7] = floor((v[5]-(v[1]*v[6]))/v[1]); // unique change in number of holdings
+	if (v[7]<0) v[0]-=v[7];
+}// end of fund cycle
+RESULT(v[0]) // end of supply 
+
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+
+////// INVESTOR EQUATIONS //////
+
+// investor sentiment
+EQUATION("invSentiment")
+USE_ZERO_INSTANCE
+
+v[0] = VL("invSentiment",1); // investor's sentiment at t-1 (S_p)
+v[1] = V("invLearningParameter"); // investor's learning param (l_p)
+v[2] = VL("mktState",1); // market state (S_c)
+v[3] = V("mktLearningParameter"); // market learning parameter (l_c)
+v[4] = V_EXT(subs, nFundSubs); // number of fund subscriptions
+v[5] = 1; // step increment
+v[6] = 0; // sum of followed fund sentiment
+v[7] = 0; // sum of followed fund learning parameter
+	
+CYCLE(cur1, "MutualFund")
+{
+	if (find(V_EXT(subs, fundSubs).begin(), V_EXT(subs, fundSubs).end(), v[5]) != V_EXT(subs, fundSubs).end())
+	{
+		v[6] += VLS(cur1, "fundSentiment", 1);
+		v[7] += VS(cur1, "fundLearningParameter");
+	}
+		v[5]++;
+} // end of mutual fund cycle
+	if (v[4] > 0)
+	{
+	v[6] = v[6]/v[4];
+	v[7] = v[7]/v[4];
+	}
+	
+v[5] = 1; // step increment again
+v[8] = V_EXT(subs, nMediaSubs);
+v[9] = 0; // sum of followed media network sentiment
+v[10] = 0; // sum of followed media network learning parameter
+	
+CYCLE(cur2, "MediaNetwork")
+{
+	if (find(V_EXT(subs, mediaSubs).begin(), V_EXT(subs, mediaSubs).end(), v[5]) != V_EXT(subs, mediaSubs).end())
+	{
+		v[9] += VLS(cur2,"netSentiment", 1);
+		v[10] += VS(cur2,"netLearningParameter");
+	}
+	v[5]++;
+} // end of media network cycle
+
+if (v[8] > 0)
+{
+	v[9] = v[9]/v[8];
+	v[10] = v[10]/v[8];
+}
+v[11] = VL("invLinkSentiment", 1); // neighbor investor sentiment
+v[12] = V("invLinkLP"); // neighbor investor learning parameter
+v[13] = VL("smSentiment", 1); // social media sentiment
+v[14] = V("smLearningParameter"); // social media learning parameter
+v[15] = v[0]*v[1] + v[2]*v[3] + v[6]*v[7] + v[9]*v[10] + v[11]*v[12] + v[13]*v[14];
+v[16] = v[1] + v[3] + v[7] + v[10] + v[12] + v[14];
+
+RESULT(v[15]/v[16]) // end of investor sentiment
+
+// investor movement confidence
+EQUATION("invMovementConfidence")
+
+v[0] = V("invCue"); // investor cue
+v[1] = V("invStrategyMax"); // upper threshold level of the strategy
+v[2] = V("invStrategyMin"); // lower threshold level of the strategy
+	
+switch(int(v[0]))
+{
+	case 1:
+		// Market Index
+		v[3] = uniform(50,200);
+		v[4] = 0;
+		if (v[3]>v[1]) {
+			v[4] = v[3]-v[1];
+		} else if (v[2]>v[3]) {
+			v[4] = v[2]-v[3];
+		}
+		v[4] = v[4]/(1+v[4]);
+		break;
+		
+	case 2:
+		// Market Index Slope
+		v[3] = uniform(-10,10);
+		v[4] = 0;
+		if (v[3]>v[1]) {
+			v[4] = v[3]-v[1];
+		} else if (v[2]>v[3]) {
+			v[4] = v[2]-v[3];
+		}
+		v[4] = v[4]/(1+v[4]);
+		break;
+		
+	case 3:
+		// Market Index Average
+		v[3] = uniform(-50,50);
+		v[4] = 0;
+		if (v[3]>v[1]) {
+			v[4] = v[3]-v[1];
+		} else if (v[2]>v[3]) {
+			v[4] = v[2]-v[3];
+		}
+		v[4] = v[4]/(1+v[4]);
+		break;
+		
+	case 4:
+		// Consecutive periods Up/Down
+		v[3] = uniform(5,15);
+		v[4] = 0;
+		if (v[3]>v[1]) {
+			v[4] = v[3]-v[1];
+		} else if (v[2]>v[3]) {
+			v[4] = v[2]-v[3];
+		}
+		v[4] = v[4]/(1+v[4]);
+		break;
+		
+	case 5:
+		// Market Index Acceleration
+		v[3] = uniform(-12,12);
+		v[4] = 0;
+		if (v[3]>v[1]) {
+			v[4] = v[3]-v[1];
+		} else if (v[2]>v[3]) {
+			v[4] = v[2]-v[3];
+		}
+		v[4] = v[4]/(1+v[4]);
+		break;
+		
+	case 6:
+		// MACD
+		v[3] = uniform(-7,7);
+		v[4] = 0;
+		if (v[3]>v[1]) {
+			v[4] = v[3]-v[1];
+		} else if (v[2]>v[3]) {
+			v[4] = v[2]-v[3];
+		}
+		v[4] = v[4]/(1+v[4]);
+		break;
+		
+	case 7:
+		//Stochastic Oscillator
+		v[3] = uniform(0,100);
+		v[4] = 0;
+		if (v[3]>v[1]) {
+			v[4] = v[3]-v[1];
+		} else if (v[2]>v[3]) {
+			v[4] = v[2]-v[3];
+		}
+		v[4] = v[4]/(1+v[4]);
+		break;
+		
+	case 8:
+		// Index Exponential Moving Average (52 - day)
+		v[3] = uniform(75, 175);
+		v[4] = 0;
+		if (v[3]>v[1]) {
+			v[4] = v[3]-v[1];
+		} else if (v[2]>v[3]) {
+			v[4] = v[2]-v[3];
+		}
+		v[4] = v[4]/(1+v[4]);
+		break;
+		
+	case 9:
+		// Index Exponential Moving Average (26 - day)
+		v[3] = uniform(75, 175);
+		v[4] = 0;
+		if (v[3]>v[1]) {
+			v[4] = v[3]-v[1];
+		} else if (v[2]>v[3]) {
+			v[4] = v[2]-v[3];
+		}
+		v[4] = v[4]/(1+v[4]);
+		break;
+		
+	default:
+		// RSI
+		v[3] = uniform(0,100);
+		v[4] = 0;
+		if (v[3]>v[1]) {
+			v[4] = v[3]-v[1];
+		} else if (v[2]>v[3]) {
+			v[4] = v[2]-v[3];
+		}
+		v[4] = v[4]/(1+v[4]);
+		break;
+}
+
+RESULT(v[4]) // end of investor movement confidence
+
+// investor invested capital
+EQUATION("invInvestedCapital")
+
+VS(THIS,"invSentiment");
+VS(THIS,"invMovementConfidence");
+
+v[0] = VS(THIS,"invCapital");
+v[1] = VS(THIS,"invSentiment");
+v[2] = VS(THIS,"invMovementConfidence");
+v[3] = VLS(THIS,"invInvestedCapital", 1);
+v[4] = (v[0]*v[3])/(v[3] + (v[0] - v[3])*exp(-v[2]*v[1]));
+	
+RESULT(v[4]) // end of investor invested capital
+
+// investor position value
+EQUATION("invPositionValue")
+
+V("index");
+VS(THIS, "invInvestedCapital");
+
+v[0] = V("index");
+v[1] = VL("index",1);
+v[2] = VS(THIS,"invInvestedCapital");
+v[3] = VLS(THIS,"invPositionValue",1);
+v[4] = VLS(THIS,"invInvestedCapital", 1);
+v[5] = (v[4]/v[1] - v[2]/v[0])*v[0]; // change in position value = ((num of shares at t) - (num of shares at t-1))*(index price at t)
+v[6] = v[3] + v[5];	
+
+RESULT(v[6]) // end of invested capital
+
+// stocks held by invs
+EQUATION("invStocks")
+v[0] = V("index");
+v[1] = VS(THIS, "invInvestedCapital");
+RESULT(floor(v[1]/v[0])) // end of stocks held by invs
+
+// desired change in num of stocks
+EQUATION("invdStocks")
+v[0] = VS(THIS, "invInvestedCapital");
+v[1] = VLS(THIS,"invStocks",1);
+v[2] = V("index");
+
+RESULT(floor((v[0]-v[1]*v[2])/v[2])) // end of desired change in num of stocks
+
+// inv free capital
+EQUATION("invFreeCapital")
+v[0] = V("invCapital");
+v[1] = V("invInvestedCapital");
+if(v[0]>=v[1]){ // if the total amount of capital is bigger than invested capital
+	v[2] = v[0] - v[1]; // then their difference is the free capital
+} else { // otherwise
+	v[2] = 0; // the agent is fully invested there is no free capital
+	WRITES(THIS, "invInvestedCapital", v[0]);
+}
+RESULT(v[2]) // end of inv free capital
+
+// invSocialMediaPost
+EQUATION("invSocialMediaPost")
+v[0] = uniform_int(0,3);
+RESULT(v[0]) // end of Social Media post
+
+// neighbour learning parameter
+EQUATION("invLinkLP")
+v[0] = 0; // sum of neighbours' learning parameters
+v[1] = 0; // counter 
+CYCLE_LINK(curl){
+	cur = LINKTO(curl);
+	v[0]+=VS(cur, "invLearningParameter");
+	v[1]+=1;
+}
+v[2] = (v[1]>0) ? v[0]/v[1] : 0;
+RESULT(v[2]) // end of neighbour learning parameter
+
+EQUATION("invLinkSentiment")
+v[0] = 0; // sum of neighbours' sentiment
+v[1] = 0; // counter 
+CYCLE_LINK(curl){
+	cur = LINKTO(curl);
+	v[0]+=VS(cur, "invSentiment");
+	v[1]+=1;
+}
+v[2] = (v[1]>0) ? v[0]/v[1] : 0;
+RESULT(v[2])
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+
+////// MUTUAL FUND EQUATIONS //////
+
+// mutual fund sentiment
+EQUATION("fundSentiment")
+
+v[0] = VLS(THIS, "fundSentiment",1);
+v[1] = VS(THIS, "fundLearningParameter");
+v[2] = VL("mktState",1); // market state (S_c)
+v[3] = V("mktLearningParameter"); // market learning parameter (l_c)
+v[4] = AVEL("invSentiment",1);
+v[5] = AVE("invLearningParameter");
+v[6] = AVEL("fundSentiment",1);
+v[7] = AVE("fundLearningParameter");
+v[8] = AVEL("netSentiment", 1);
+v[9] = AVE("netLearningParameter");
+// v[10] social media sentiment
+// v[11] social media learning parameter
+v[12] = v[0]*v[1] + v[2]*v[3] + v[4]*v[5] + v[6]*v[7]  + v[8]*v[9];// + v[10]*v[11];
+v[13] = v[1] + v[3] + v[3] + v[7] + v[9];// + v[11];
+	
+RESULT(v[12]/v[13]) // end of mutual fund sentiment
+
+// fund movement confidence
+EQUATION("fundMovementConfidence")
+
+V("index");
+V("dIndex");
+V("ddIndex");
+V("indexSlope");
+V("indexAvg");
+V("indexEMA52");
+V("indexEMA26");
+V("indexEMA12");
+V("MACD");
+V("stochasticOscillator");
+V("RSI");
+
+v[0] = V("fundCue"); // fund cue
+v[1] = V("fundStrategyMax"); // upper threshold level of the strategy
+v[2] = V("fundStrategyMin"); // lower threshold level of the strategy
+	
+switch(int(v[0]))
+{
+	case 1:
+		// Market Index
+		v[3] = V("index");
+		if (v[3]>v[1])
+		{
+			v[4] = v[3]-v[1]; 
+			v[4] = -(-v[4])/(1+v[4]); 
+		} else if (v[3]<v[2]) 
+		{
+			v[4] =  v[3]-v[2]; 
+			v[4] = -v[4]/(1-v[4]);
+		} else
+		{
+			v[4] = 0;
+		}
+		break;
+		
+	case 2:
+		// Market Index Slope
+		v[3] = V("indexSlope");
+		if (v[3]>v[1])
+		{
+			v[4] = v[3]-v[1]; 
+			v[4] = -(-v[4])/(1+v[4]); 
+		} else if (v[3]<v[2]) 
+		{
+			v[4] =  v[3]-v[2]; 
+			v[4] = -v[4]/(1-v[4]);
+		} else
+		{
+			v[4] = 0;
+		}
+		break;
+		
+	case 3:
+		// Market Index Average
+		v[3] = V("indexAvg"); 
+		if (v[3]>v[1])
+		{
+			v[4] = v[3]-v[1]; 
+			v[4] = (-v[4])/(1+v[4]); 
+		} else if (v[3]<v[2]) 
+		{
+			v[4] =  v[3]-v[2]; 
+			v[4] = v[4]/(1-v[4]);
+		} else
+		{
+			v[4] = 0;
+		}
+		break;
+		
+	case 4:
+		// Consecutive periods Up/Down
+		int i;
+		i = 1;
+		v[3] = 0;
+		v[4] = V("dIndex");
+		v[5] = VL("dIndex", i);
+
+		while (v[4]*v[5]>0) {
+			v[3]++;
+			i++;
+			v[5] = VL("dIndex", i);
+		}
+		if (v[3]>v[1])
+		{
+			v[4] = v[3]-v[1]; 
+			v[4] = (-v[4])/(1+v[4]); 
+		} else if (v[3]<v[2]) 
+		{
+			v[4] =  v[3]-v[2]; 
+			v[4] = v[4]/(1-v[4]);
+		} else
+		{
+			v[4] = 0;
+		}
+		break;
+		
+	case 5:
+		// Market Index Acceleration
+		v[3] = V("ddIndex");
+		if (v[3]>v[1])
+		{
+			v[4] = v[3]-v[1]; 
+			v[4] = (-v[4])/(1+v[4]); 
+		} else if (v[3]<v[2]) 
+		{
+			v[4] =  v[3]-v[2]; 
+			v[4] = v[4]/(1-v[4]);
+		} else
+		{
+			v[4] = 0;
+		}
+		break;
+		
+	case 6:
+		// MACD
+		v[3] = V("MACD");
+		if (v[3]>v[1])
+		{
+			v[4] = v[3]-v[1]; 
+			v[4] = (-v[4])/(1+v[4]); 
+		} else if (v[3]<v[2]) 
+		{
+			v[4] =  v[3]-v[2]; 
+			v[4] = v[4]/(1-v[4]);
+		} else
+		{
+			v[4] = 0;
+		}
+		break;
+		
+	case 7:
+		//Stochastic Oscillator
+		v[3] = V("stochasticOscillator");
+		if (v[3]>v[1])
+		{
+			v[4] = v[3]-v[1]; 
+			v[4] = (-v[4])/(1+v[4]); 
+		} else if (v[3]<v[2]) 
+		{
+			v[4] =  v[3]-v[2]; 
+			v[4] = v[4]/(1-v[4]);
+		} else
+		{
+			v[4] = 0;
+		}
+		break;
+		
+	case 8:
+		// Index Exponential Moving Average (52 - day)
+		v[3] = V("indexEMA52");
+		if (v[3]>v[1])
+		{
+			v[4] = v[3]-v[1]; 
+			v[4] = (-v[4])/(1+v[4]); 
+		} else if (v[3]<v[2]) 
+		{
+			v[4] =  v[3]-v[2]; 
+			v[4] = v[4]/(1-v[4]);
+		} else
+		{
+			v[4] = 0;
+		}
+		break;
+		
+	case 9:
+		// Index Exponential Moving Average (26 - day)
+		v[3] = V("indexEMA26");
+		if (v[3]>v[1])
+		{
+			v[4] = v[3]-v[1]; 
+			v[4] = (-v[4])/(1+v[4]); 
+		} else if (v[3]<v[2]) 
+		{
+			v[4] =  v[3]-v[2]; 
+			v[4] = v[4]/(1-v[4]);
+		} else
+		{
+			v[4] = 0;
+		}
+		break;
+		
+	default:
+		// RSI - mean reverting
+		v[3] = V("RSI");
+		if (v[3]>v[1])
+		{
+			v[4] = v[3]-v[1]; 
+			v[4] = (-v[4])/(1+v[4]); 
+		} else if (v[3]<v[2]) 
+		{
+			v[4] =  v[3]-v[2]; 
+			v[4] = v[4]/(1-v[4]);
+		} else
+		{
+			v[4] = 0;
+		}
+		break;
+}
+RESULT(v[4])
+
+// fund invested capital
+EQUATION("fundInvestedCapital")
+
+V("fundSentiment");
+V("fundMovementConfidence");
+
+v[0] = V("fundCapital");
+v[1] = V("fundSentiment");
+v[2] = V("fundMovementConfidence");
+v[3] = VL("fundInvestedCapital", 1);
+v[4] = (v[0]*v[3])/(v[3] + (v[0] - v[3])*exp(-v[2]*v[1]));
+
+RESULT(v[4]) // end of fund invested capital
+
+// fund position value
+EQUATION("fundPositionValue")
+
+V("index");
+V("fundInvestedCapital");
+
+v[0] = V("index");
+
+if (T>1)
+{
+	v[1] = VL("index",1);
+	v[2] = V("fundInvestedCapital");
+	v[3] = VL("fundPositionValue",1);
+	v[4] = VL("fundInvestedCapital", 1);
+	v[5] = (v[1]*v[0]!=0) ? (v[4]/v[1] - v[2]/v[0])*v[0]:0; // change in position value = ((num of shares at t) - (num of shares at t-1))*(index price at t)
+	v[6] = v[3] + v[5];
+} else
+{
+	v[6] = V("fundInvestedCapital");
+}
+
+
+RESULT(v[6]) // end of fund invested capital
+
+// number of stocks held
+EQUATION("fundStocks")
+v[0] = V("index");
+v[1] = VS(THIS,"fundInvestedCapital");
+RESULT(floor(v[1]/v[0])) // end of number of stocks held
+
+// desired change in num of stocks
+EQUATION("funddStocks")
+v[0] = VS(THIS, "fundInvestedCapital");
+v[1] = VLS(THIS,"fundStocks",1);
+v[2] = V("index");
+
+RESULT(floor((v[0]-v[1]*v[2])/v[2])) // end of desired change in num of stocks
+
+// fund free capital
+EQUATION("fundFreeCapital")
+v[0] = V("fundCapital");
+v[1] = V("fundInvestedCapital");
+if(v[0]>=v[1]){ // if the total amount of capital is bigger than invested capital
+	v[2] = v[0] - v[1]; // then their difference is the free capital
+} else { // otherwise
+	v[2] = 0; // the agent is fully invested there is no free capital
+	WRITES(THIS, "fundInvestedCapital", v[0]);
+}
+RESULT(v[2]) // end of fund free capital
+
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+
+////// MEDIA NETWORK EQUATIONS //////
+
+// media network sentiment
+EQUATION("netSentiment")
+
+v[0] = VL("netSentiment",1);
+v[1] = V("netLearningParameter");
+v[2] = VL("mktState",1); // market state (S_c)
+v[3] = V("mktLearningParameter"); // market learning parameter (l_c)
+v[4] = AVEL("invSentiment",1);
+v[5] = AVE("invLearningParameter");
+v[6] = AVEL("fundSentiment",1);
+v[7] = AVE("fundLearningParameter");
+v[8] = AVEL("netSentiment", 1);
+v[9] = AVE("netLearningParameter");
+// v[10] social media sentiment
+// v[11] social media learning parameter
+v[12] = v[0]*v[1] + v[2]*v[3] + v[4]*v[5] + v[6]*v[7]  + v[8]*v[9];// + v[10]*v[11];
+v[13] = v[1] + v[3] + v[3] + v[7] + v[9];// + v[11];
+
+RESULT(v[12]/v[13])
+
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+
+////// SOCIAL MEDIA EQUATIONS //////
+
+// social media learning parameter
+EQUATION("smLearningParameter")
+v[0] = 0; // sum of learning param
+v[1] = 0; // counter 
+CYCLE(cur, "Investor")
+{
+	v[2] = VS(cur, "invSocialMediaPost");
+	if (v[2]>0) {
+		v[0] += VS(cur, "invLearningParameter");
+		v[1] += 1;
+	}
+}
+v[2] = (v[1]!=0) ? v[0]/v[1]:0;
+RESULT(v[2]) // end of social media learning param
+
+// social media sentiment
+EQUATION("smSentiment")
+v[0] = 0; // counter
+v[1] = 0; // learning param
+CYCLE(cur, "Investor")
+{
+	v[2] = VS(cur, "invSocialMediaPost");
+	if (v[2]>0) {
+		v[3] = VS(cur,"invLearningParameter");
+		v[0] += v[2]*VS(cur, "invSentiment")*v[3]; // numberOfPosts*sentiment*learningParam
+		v[1] += v[2]*v[3]; // numberOfPosts*learningParam
+	}
+}
+v[4] = (v[1]!=0) ? v[0]/v[1]:0;
+RESULT(v[4]) // end of social media learning param
+
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+
+// matching orders - trading mechanism
+EQUATION("matchingOrders")
+
+v[0] = V("demand");
+v[1] = V("supply");
+v[2] = v[0] - v[1]; // net demand
+v[3] = V("index");
+
+while (v[2] != 0) {
+    v[4] = uniform_int(0, 1); // 0: investor, 1: mutual fund
+
+    if (v[4] > 0) { // mutual fund
+        CYCLE(cur, "MutualFund") {
+            v[5] = VS(cur, "funddStocks");			
+			v[6] = uniform_int(0, (v[2] > 0) ? v[2] : -v[2]); // amount of stocks for buy or sell
+
+            if ((v[2] > 0 && v[5] > 0) || (v[2] < 0 && v[5] < 0)) {
+                v[7] = min((v[2] > 0) ? min(v[2],v[5]) : min(-v[2],-v[5]), v[6]);
+                v[2] -= (v[2] > 0) ? v[7] : -v[7]; // update excess demand/supply
+                v[5] -= (v[2] > 0) ? v[7] : -v[7]; // update desired number of stocks
+                v[8] = VLS(cur, "fundStocks", 1);
+                v[9] = (v[5] + v[8]) * v[3];
+               	WRITES(cur, "fundFreeCapital", VS(cur, "fundFreeCapital") + (VS(cur, "fundInvestedCapital") - v[9]));
+                WRITES(cur, "fundInvestedCapital", v[9]);
+                WRITES(cur, "funddStocks", v[5]);
+                WRITES(cur, "fundStocks", v[5]+v[8]);
+            }
+        }
+    } else { // investor
+        CYCLE(cur, "Investor") {
+            v[5] = VS(cur, "invdStocks");
+            v[6] = uniform_int(0, (v[2] > 0) ? v[2] : -v[2]); // amount of stocks for buy or sell
+
+            if ((v[2] > 0 && v[5] > 0) || (v[2] < 0 && v[5] < 0)) {
+                v[7] = min((v[2] > 0) ? min(v[2],v[5]) : min(-v[2],-v[5]), v[6]);
+                v[2] -= (v[2] > 0) ? v[7] : -v[7]; // update excess demand/supply
+                v[5] -= (v[2] > 0) ? v[7] : -v[7]; // update desired number of stocks
+                v[8] = VLS(cur, "invStocks", 1);
+                v[9] = (v[5] + v[8]) * v[3];
+                WRITES(cur, "invFreeCapital", VS(cur, "invFreeCapital") + (VS(cur, "invInvestedCapital") - v[9]));
+                WRITES(cur, "invInvestedCapital", v[9]);
+                WRITES(cur, "invdStocks", v[5]);
+                WRITES(cur, "invStocks", v[5]+v[8]);
+            }
+        }
+    }
+}
+
+RESULT(1) // end of matching orders
+
+MODELEND
+
+// do not add Equations in this area
+
+void close_sim( void )
+{
+	// close simulation special commands go here
+}
+
+END_EQ_FILE
